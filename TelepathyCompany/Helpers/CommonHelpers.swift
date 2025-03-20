@@ -10,7 +10,7 @@ import SwiftUI
 extension View {
 
     func fontBold(color: Color = .black, size: CGFloat) -> some View {
-        foregroundColor(color).font(.custom("Circe-Bold", size: size))
+        foregroundColor(color).font(.custom("circe-bold", size: size))
     }
 
     func fontRegular(color: Color = .black, size: CGFloat) -> some View {

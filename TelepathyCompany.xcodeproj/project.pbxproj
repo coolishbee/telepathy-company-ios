@@ -14,9 +14,22 @@
 		1A946B302D4B3DAD00599288 /* TelepathyCompany.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelepathyCompany.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1AA233BF2D89DF1200518C23 /* Exceptions for "TelepathyCompany" folder in "TelepathyCompany" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1A946AEC2D4A857800599288 /* TelepathyCompany */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1A946B1E2D4B392500599288 /* TelepathyCompany */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1AA233BF2D89DF1200518C23 /* Exceptions for "TelepathyCompany" folder in "TelepathyCompany" target */,
+			);
 			path = TelepathyCompany;
 			sourceTree = "<group>";
 		};
@@ -84,11 +97,12 @@
 				};
 			};
 			buildConfigurationList = 1A946AE82D4A857800599288 /* Build configuration list for PBXProject "TelepathyCompany" */;
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ko,
+				en,
 			);
 			mainGroup = 1A946AE42D4A857800599288;
 			minimizedProjectReferenceProxies = 1;
@@ -131,6 +145,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -194,6 +209,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -256,6 +272,7 @@
 				DEVELOPMENT_TEAM = 685BA2XV8P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TelepathyCompany/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "위치 권한 요청합니다";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 권한 요청합니다";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -288,6 +305,7 @@
 				DEVELOPMENT_TEAM = 685BA2XV8P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TelepathyCompany/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "위치 권한 요청합니다";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 권한 요청합니다";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -84,7 +84,6 @@ struct MapView: UIViewRepresentable {
         mkMapView.register(ClusterAnnotationView.self,
                            forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
     }
-        
 }
 
 extension MapView : MapViewProtocol {

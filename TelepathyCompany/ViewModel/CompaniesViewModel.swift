@@ -96,4 +96,9 @@ class CompaniesViewModel: ObservableObject {
             self.annotiations = nil
         }
     }
+    
+    //improve
+    func select(company: Company) {
+        
+    }
 }

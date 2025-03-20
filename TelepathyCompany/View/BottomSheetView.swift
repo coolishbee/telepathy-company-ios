@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BottomSheetView: View {
-    @State var jobs: [Job]
+    //@State var jobs: [Job]
     @Binding var selectedAnnotation: CompanyAnnotation?
     @Binding var isPresented: Bool
     

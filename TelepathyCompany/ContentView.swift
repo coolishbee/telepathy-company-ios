@@ -10,13 +10,10 @@ import MapKit
 
 struct ContentView: View {
     
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 37.5007, longitude: 127.0364),
-        latitudinalMeters: 400, longitudinalMeters: 400)
+//    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.5007, longitude: 127.0364),
+//                                                   latitudinalMeters: 400, longitudinalMeters: 400)
     
-    @State var isDetailPresented = false
-    
-    @ObservedObject var viewModel = CompaniesViewModel()
+    //@State var isDetailPresented = false
     
     init() {
         let appearance = UITabBarAppearance()
@@ -31,38 +28,23 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
-            TabView {
-                Map(coordinateRegion: $region)
-                    .ignoresSafeArea()
-                    .tabItem {
-                        Image(systemName: "house")
-                        Text("Home")
-                    }
-                MapContentView(annotations: $viewModel.annotiations, showMapAlert: $viewModel.showMapAlert, viewModel: viewModel)
-                    .fullScreenCover(isPresented: $isDetailPresented){}
-                    .ignoresSafeArea()
-                    .tabItem{
-                        Image(systemName: "map")
-                        Text("Map")
-                    }
-//                MapView(annotations: $viewModel.annotiations, viewModel: viewModel)
-//                    .alert(isPresented: $viewModel.showMapAlert) {
-//                        Alert(title: Text("Location access denied"),
-//                              message: Text("Your location is needed"),
-//                              primaryButton: .cancel(),
-//                              secondaryButton: .default(Text("Settings"),
-//                                                        action: { self.openDeviceSettings() }))
-//                    }.edgesIgnoringSafeArea(.all)
-//                    .tabItem{
-//                        Image(systemName: "map")
-//                        Text("Map")
-//                    }
-                MyPagerView()
-                    .tabItem {
-                        Image(systemName: "person")
-                        Text("Profile")
-                    }
+            ZStack{
+                TabView {
+                    MapContentView()
+                        //.fullScreenCover(isPresented: $isDetailPresented){}
+                        .ignoresSafeArea()
+                        .tabItem{
+                            Image(systemName: "map")
+                            Text("Map")
+                        }
+                    MyPagerView()
+                        .tabItem {
+                            Image(systemName: "person") //house
+                            Text("Profile") //Home
+                        }
+                }
             }
+            
         }
     }
 }

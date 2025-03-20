@@ -11,7 +11,7 @@ import SwiftUI
 struct TelepathyCompanyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView()            
         }
     }
 }

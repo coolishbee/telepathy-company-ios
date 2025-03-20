@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  TelepathyCompany
+
+  Created by james on 3/16/25.
+  
+*/
+
+"CompanyList" = "회사목록";
+"Intro" = "회사소개";
+"Follow" = "팔로잉";
+"Apply" = "지원하기";
+"Jobs" = "채용중인 포지션";
+"Detail" = "포지션 상세";
+"Responsibilities" = "주요업무";
+"Requirements" = "자격요건";
+"Preferred Qualifications" = "우대사항";
+"Welfare" = "복지";
