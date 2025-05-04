@@ -9,9 +9,9 @@ import SwiftUI
 
 struct MapContentView: View {
     
-    @ObservedObject private var viewModel = CompaniesViewModel()
+    @ObservedObject var viewModel: CompaniesViewModel
     
-    @State var isDetailPresented = false
+    //@State var isDetailPresented = false
     
     var body : some View {
         ZStack {
@@ -25,27 +25,27 @@ struct MapContentView: View {
                 }
                 .edgesIgnoringSafeArea(.all)
             
-            GeometryReader { geometry in
-                VStack {
-                    if viewModel.isSelectedAnnotation {
-                        BottomSheetView(selectedAnnotation: $viewModel.selectedAnnotation,
-                                        isPresented: $isDetailPresented)
-                        .onDisappear() {
-                            self.viewModel.selectedAnnotation = nil
-                        }
-                        .padding(.top, geometry.size.height * 0.8)
-                        .transition(.opacity.combined(with: .move(edge: .bottom)))
-                    }
-                }
-                .animation(.interactiveSpring(), value: viewModel.isSelectedAnnotation)
-                .fullScreenCover(isPresented: $isDetailPresented) {
-                    CompanyDetailView(selectedCompany: viewModel.selectedCompany,
-                                      selectedAnnotation: $viewModel.selectedAnnotation)
-                    .onDisappear() {
-                        print("onDisappear!!!")
-                    }
-                }
-            }
+//            GeometryReader { geometry in
+//                VStack {
+//                    if viewModel.isSelectedAnnotation {
+//                        BottomSheetView(selectedAnnotation: $viewModel.selectedAnnotation,
+//                                        isPresented: $isDetailPresented)
+//                        .onDisappear() {
+//                            self.viewModel.selectedAnnotation = nil
+//                        }
+//                        .padding(.top, geometry.size.height * 0.8)
+//                        .transition(.opacity.combined(with: .move(edge: .bottom)))
+//                    }
+//                }
+//                .animation(.interactiveSpring(), value: viewModel.isSelectedAnnotation)
+//                .fullScreenCover(isPresented: $isDetailPresented) {
+//                    CompanyDetailView(selectedCompany: viewModel.selectedCompany,
+//                                      selectedAnnotation: $viewModel.selectedAnnotation)
+//                    .onDisappear() {
+//                        print("onDisappear!!!")
+//                    }
+//                }
+//            }
         }
         
     }
